@@ -1,0 +1,16 @@
+{
+    "name": "image/importer",
+    "description": "image importer for the namecheap",
+    "authors": [
+        {
+            "name": "Ishu Sharma",
+            "email": "1716514012@kit.ac.in"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Importer\\": "headers"
+        }
+    },
+    "require": {}
+}
