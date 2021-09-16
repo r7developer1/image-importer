@@ -108,7 +108,9 @@ class Importer {
                         mkdir("{$this->save_path}" . self::IMAGE_DIR , 0755);
                     }
 
-                    $copied = copy(self::IMAGE_DIR . "/{$item_dir}/{$image_name}" , "{$this->save_path}" . self::IMAGE_DIR . "/{$image_name}" );
+                    $ext = substr($image_name , strpos($image_name ,'.') , strlen($image_name));
+
+                    $copied = copy(self::IMAGE_DIR . "/{$item_dir}/{$image_name}" , "{$this->save_path}" . self::IMAGE_DIR . "/{$tool['t_name']}{$ext}" );
 
                     if (!$copied){
                         echo "unable to copy $image_name";
